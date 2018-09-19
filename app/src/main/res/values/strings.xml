@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Vocab Quiz</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_quiz">Quiz Questions</string>
+    <string name="question">Question 1. Who was the first president of India?</string>
+    <string name="answer_one">Jawarlal Nehru</string>
+    <string name="answer_two">Rajendra Prasad</string>
+    <string name="answer_three">Mahatma Gandhi</string>
+    <string name="answer_four">Dont know</string>
+    <string name="next_questions"> Next Question</string>
+    <string name="previous_questions"> Previous Question</string>
+    <string name="title_activity_result">Results!!!</string>
+
+    <!-- AdMob ad unit IDs -->
+    <!--ca-app-pub-9069516964783203/9735627010-->
+    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>
+    <!--ca-app-pub-9069516964783203/6176597901-->
+    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>
+
+</resources>

@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "765409286084",
+    "firebase_url": "https://vocab-quiz-app-46d99.firebaseio.com",
+    "project_id": "vocab-quiz-app-46d99",
+    "storage_bucket": "vocab-quiz-app-46d99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765409286084:android:c8e486544b33014e",
+        "android_client_info": {
+          "package_name": "info.mart.vocabquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765409286084-gq06tvslpt1u40provrtf4tfb9hu8b4s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "info.mart.vocabquiz",
+            "certificate_hash": "9c9058bb1ef2ddc0edb2e914805aeac12e802822"
+          }
+        },
+        {
+          "client_id": "765409286084-dq63b2etlleqi2fm35321arfnglleurq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuEGmpukzpg3yZtKym1pOVFbKgZTT5ow0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765409286084-dq63b2etlleqi2fm35321arfnglleurq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      },
+      "admob_app_id": "ca-app-pub-8075556671029386~5417682830"
+    }
+  ],
+  "configuration_version": "1"
+}

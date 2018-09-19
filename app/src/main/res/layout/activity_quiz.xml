@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="info.mart.vocabquiz.QuizActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/question"
+        android:id="@+id/quiz_question"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/quiz_question"
+        android:layout_weight="0.04" >
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+    </RadioGroup>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:gravity="center"
+        android:id="@+id/nextquiz"
+        android:textColor="@color/white"
+        android:text="@string/next_questions"
+        android:background="@drawable/quizbutton"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignBaseline="@+id/previousquiz"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:gravity="center"
+        android:id="@+id/previousquiz"
+        android:textColor="@color/white"
+        android:text="@string/previous_questions"
+        android:background="@drawable/quizbutton"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignLeft="@+id/radioGroup"
+        android:padding="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignStart="@+id/radioGroup" />
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_ad_view"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/custom_ad_view"/>
+    </LinearLayout>-->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_home_footer" />
+
+</RelativeLayout>
