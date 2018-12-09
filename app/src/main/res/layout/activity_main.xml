@@ -11,14 +11,20 @@
         android:background="@drawable/background"
         android:id="@+id/GifImageView" />-->
 
+    <!--<com.google.android.gms.common.SignInButton
+        android:id="@+id/btn_sign_in"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="113dp" />-->
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="32dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/mbutton"
         android:layout_marginBottom="48dp" />

@@ -28,9 +28,18 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.7'
     implementation 'com.google.android.gms:play-services-ads:15.0.1'
     implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.google.android.gms:play-services-auth:15.0.1'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
     //implementation 'com.google.firebase:firebase-ads:15.0.1'
     //implementation 'org.apache.httpcomponents:httpcore:4.4.1'
     //implementation 'org.apache.httpcomponents:httpclient:4.5'
 }
 
 //apply plugin: 'com.google.gms.google-services'
+//keytool -list -v -keystore "C:\Users\Tejash\Desktop\Desktop\My_Projects\My_project.jks" -alias My_project -storepass android -keypass android
+
+//Client ID
+//220659133522-23s5q4e937bmmrd6uj6f328442th4qcb.apps.googleusercontent.com
+
+//Client Secret
+//G4O771bSqnWRpUwbjmDBbrOL

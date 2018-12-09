@@ -21,6 +21,9 @@ import java.util.List;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
 
+
+    //keytool -list -v -keystore "C:\Users\Tejash\Desktop\Desktop\My_Projects\My_project.jks" -alias androiddebugkey -storepass android -keypass android
+
     private Context context;
     private List<QuizWrapper> quizList;
     public CustomAdapter(Context context, List<QuizWrapper> quizList) {
@@ -40,7 +43,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         QuizWrapper quizWrapper = quizList.get(position);
         // set the data in items
-        holder.questionId.setText(String.valueOf(quizWrapper.getId())+".");
+        int count = position;
+        holder.questionId.setText(String.valueOf(count+1)+".");
         holder.questions.setText(quizWrapper.getQuestion());
         holder.options.setText("Options: "+quizWrapper.getAnswers());
         holder.answers.setText("Ans: "+quizWrapper.getCorrectAnswer());

@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/question"
+        android:text=""
         android:id="@+id/quiz_question"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="10dp"
@@ -32,22 +32,22 @@
             android:id="@+id/radio0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="" />
         <RadioButton
             android:id="@+id/radio1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="" />
         <RadioButton
             android:id="@+id/radio2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="" />
         <RadioButton
             android:id="@+id/radio3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="" />
     </RadioGroup>
 
     <Button

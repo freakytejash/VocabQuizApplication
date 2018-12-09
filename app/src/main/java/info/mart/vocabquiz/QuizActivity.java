@@ -58,6 +58,7 @@ public class QuizActivity extends AppCompatActivity implements Animation.Animati
     private RadioButton optionFour;
 
     private int currentQuizQuestion;
+    private int counter;
     private int quizCount;
 
     private QuizWrapper firstQuestion;
@@ -68,6 +69,7 @@ public class QuizActivity extends AppCompatActivity implements Animation.Animati
     private AdView adView;
     private Animation animFadein;
     private ProgressDialog pDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -180,6 +182,7 @@ public class QuizActivity extends AppCompatActivity implements Animation.Animati
                 }
 
                 currentQuizQuestion++;
+                counter++;
                     if(currentQuizQuestion >= quizCount){
                         Toast.makeText(QuizActivity.this, "End of the Quiz Questions", Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
@@ -194,7 +197,7 @@ public class QuizActivity extends AppCompatActivity implements Animation.Animati
                     }
                     else{
                         firstQuestion = parsedObject.get(currentQuizQuestion);
-                        quizQuestion.setText(firstQuestion.getId()+". "+firstQuestion.getQuestion());
+                        quizQuestion.setText(/*firstQuestion.getId()+". "+*/counter +". " +firstQuestion.getQuestion());
                         quizQuestion.startAnimation(animFadein);
                         String[] possibleAnswers = firstQuestion.getAnswers().split(",");
                         uncheckedRadioButton();
@@ -211,6 +214,7 @@ public class QuizActivity extends AppCompatActivity implements Animation.Animati
             public void onClick(View v) {
                 if(currentQuizQuestion > 0) {
                     currentQuizQuestion--;
+                    counter--;
                 }else if(currentQuizQuestion <= 0){
                    return;
                 }
@@ -412,14 +416,15 @@ public class QuizActivity extends AppCompatActivity implements Animation.Animati
                     @Override
                     public void onResponse(JSONObject response) {
                         System.out.println("Resulted Value: " + response.toString());
-                        parsedObject = returnParsedJsonObject(response.toString());
+                        parsedObject = returnParsedJsonObject(response.toString().replaceAll("”","\\\""));
                         if(parsedObject == null){
                             return;
                         }
                         quizCount = parsedObject.size();
                         firstQuestion = parsedObject.get(0);
-
-                        quizQuestion.setText(firstQuestion.getQuestion());
+                        counter = currentQuizQuestion;
+                        counter++;
+                        quizQuestion.setText(counter + ". "+firstQuestion.getQuestion());
                         String[] possibleAnswers = firstQuestion.getAnswers().split(",");
                         optionOne.setText(possibleAnswers[0]);
                         optionTwo.setText(possibleAnswers[1]);

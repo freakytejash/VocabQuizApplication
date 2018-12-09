@@ -79,7 +79,7 @@ public class ResultActivity extends AppCompatActivity {
 		RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
 		Gson gson = new Gson();
-		for(int i = 0; i < 10; i++) {
+		for(int i = 0; i < 5; i++) {
 			String questions = sharedpreferences.getString(String.valueOf(i), "");
 			quizWrapper = gson.fromJson(questions, QuizWrapper.class);
 			quizList.add(quizWrapper);
@@ -110,33 +110,28 @@ public class ResultActivity extends AppCompatActivity {
 		//display score
 		if(score == 0){
 			rating = 0;
-		} else if(score == 1 || score == 2){
+		} else if(score == 1){
 			rating = 1;
-		}else if(score == 3 || score == 4){
+		}else if(score == 2){
 			rating = 2;
-		}else if(score == 5 || score == 6){
+		}else if(score == 3){
 			rating = 3;
-		}else if(score == 7 || score == 8){
+		}else if(score == 4){
 			rating = 4;
-		}else if(score == 9 || score == 10){
+		}else if(score == 5){
 			rating = 5;
 		}
 		bar.setRating(rating);
 		switch (score)
 		{
-			case 0:
+		case 0:
 		case 1:
-		case 2:
+		case 2: t.setText("Your Score :"+score+" Oopsie! Better Luck Next Time!");
+		break;
 		case 3:
-		case 4: t.setText("Your Score :"+score+" Oopsie! Better Luck Next Time!");
+		case 4:t.setText("Your Score :"+score+" Hmmmm.. Someone's been reading a lot of Vocabs");
 		break;
-		case 5:
-		case 6:
-		case 7:
-		case 8:t.setText("Your Score :"+score+" Hmmmm.. Someone's been reading a lot of Vocabs");
-		break;
-		case 9:
-		case 10:t.setText("Your Score :"+score+" Who are you? A Vocabs wizard???");
+		case 5:t.setText("Your Score :"+score+" Who are you? A Vocabs wizard???");
 		break;
 		}
 	}
