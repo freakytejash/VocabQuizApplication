@@ -13,9 +13,13 @@
     <string name="title_activity_result">Results!!!</string>
 
     <!-- AdMob ad unit IDs -->
-    <!--ca-app-pub-9069516964783203/9735627010-->
-    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>
-    <!--ca-app-pub-9069516964783203/6176597901-->
-    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>
+    <!--Prod ID-->
+    <string name="banner_home_footer">ca-app-pub-9069516964783203/9735627010</string>
+    <string name="interstitial_full_screen">ca-app-pub-9069516964783203/6176597901</string>
+
+    <!--Test id-->
+    <!--<string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>-->
+
 
 </resources>

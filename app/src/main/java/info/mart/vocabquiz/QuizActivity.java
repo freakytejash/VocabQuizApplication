@@ -220,7 +220,7 @@ public class QuizActivity extends AppCompatActivity implements Animation.Animati
                 }
                 uncheckedRadioButton();
                 firstQuestion = parsedObject.get(currentQuizQuestion);
-                quizQuestion.setText(firstQuestion.getQuestion());
+                quizQuestion.setText(counter +". "+firstQuestion.getQuestion());
                 quizQuestion.startAnimation(animFadein);
                 String[] possibleAnswers = firstQuestion.getAnswers().split(",");
                 optionOne.setText(possibleAnswers[0]);
